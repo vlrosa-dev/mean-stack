@@ -1,3 +1,6 @@
+# Preparando Projeto
+    1. Verificar se o Node está instalado
+    2. node_modules: Comando 'npm install' dentro da pasta do projeto
 
 # ANGULAR - Iniciar Aplicação
     npm run build
@@ -10,8 +13,8 @@ Levantar banco:
     C:\Users\Victo\.aplicacoes\prog-web\seed-project\data\db
 
 # GITHUB - Iniciar Repositório
-    GIT INIT
-
+    Git Init
+    
 # GITHUB - Configurações Globais
     git config --global user.name "Victor Rosa"
     git config --global user.email "victor.lmr@hotmail.com"
