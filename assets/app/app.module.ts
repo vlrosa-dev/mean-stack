@@ -9,6 +9,7 @@ import { MessageInputComponent } from './messages/message-input/message-input.co
 import { MessagesComponent } from './messages/messages.component';
 import { AuthenticationComponent } from './auth/authentication.component';
 import { HeaderComponent } from './header/header.component';
+import { myrouting } from './app.routing';
 
 @NgModule({
     declarations: [
@@ -20,7 +21,7 @@ import { HeaderComponent } from './header/header.component';
         AuthenticationComponent,
         HeaderComponent
     ],
-    imports: [BrowserModule, FormsModule],
+    imports: [BrowserModule, FormsModule, myrouting],
     bootstrap: [AppComponent]
 })
 export class AppModule {
