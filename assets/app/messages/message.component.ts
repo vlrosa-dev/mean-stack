@@ -1,6 +1,7 @@
 
 import { Component, Input, Output, EventEmitter } from '@angular/core'
 import { Message } from './message.model'
+import { MessageService } from './message.services';
 
 @Component({
     selector: 'app-message',
@@ -15,6 +16,12 @@ export class MessageComponent{
     @Input() messageVarClasse : Message = new Message("", "", "", "");
 
     @Input('inputMessage') messageVarClasseAlias : Message = new Message("", "", "", "");
+
+    constructor(private messageServiceObj: MessageService){}
+    
+    onDelete(){
+        this.messageServiceObj.deleteMessage(this.messageVarClasse);
+    }
 
     @Output() editClicked_MessageMetodoClasse = new EventEmitter<string>();
 
