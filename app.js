@@ -4,10 +4,31 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
 
 var appRoutes = require('./routes/app');
 
 var app = express();
+
+mongoose.connect('mongodb://localhost:27017/node-angular');
+
+var User = require('./models/user');
+appRoutes.get('/node-mongodb-moongose-user', function (req, res, next){
+    res.render('index');
+});
+
+appRoutes.post('/node-mongodb-moongose-user', function(req, res, next){
+    var emailVar = req.body.emailBody;
+    var userObject = new User({
+        firstname: 'Marcelo',
+        lastname: 'Pé de Grilo',
+        password: 'tudodois',
+        email: emailVar
+    });
+
+    userObject.save();
+    res.redirect('/node-mongodb-moongose-user');
+})
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

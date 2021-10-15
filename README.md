@@ -8,9 +8,7 @@
 
 # MONGODB - Conexão
 Levantar banco: 
-    C:\Program Files\MongoDB\Server\5.0\bin\mongod.exe
-    --dbpath
-    C:\Users\Victo\.aplicacoes\prog-web\seed-project\data\db
+    C:\Program Files\MongoDB\Server\5.0\bin\mongod.exe --dbpath C:\Users\Victo\.aplicacoes\prog-web\seed-project\data\db
 
 # GITHUB - Iniciar Repositório
     Git Init
